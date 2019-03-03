@@ -1,0 +1,16 @@
+.back1{
+  background-image: url("backimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .jumbotron {
+    background: none
+}
+.container .jumbotron .display-4{
+  align-items: center;
+  text-align: center;
+}
+.container .jumbotron .lead{
+  width: 75%;
+  float:right;
+}
