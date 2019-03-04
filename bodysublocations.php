@@ -10,7 +10,7 @@
   <body class="back1">
 <div class="wrap">
   <h1 class="he2">BODY sub locations</h1>
-  <form class="" action="sublocation.html" method="post">
+  <form class="" action="sublocation.php" method="post">
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
   <label class="form-check-label" for="inlineRadio1">1</label>

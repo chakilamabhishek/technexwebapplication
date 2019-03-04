@@ -10,7 +10,7 @@
   <body class="back1">
 <div class="wrap">
   <h1 class="he2">SUB locations</h1>
-  <form class="" action="result.html" method="post">
+  <form class="" action="result.php" method="post">
     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
