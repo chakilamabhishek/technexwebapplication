@@ -31,7 +31,7 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['user
     <input type="email" placeholder="Email" name="user" value="" required>
     <input type="password" placeholder="enter password" name="pass" value="" required>
     <input type="submit" name="submit" value="submit">
-      <a class="a" href="login.php">Login</a>
+      <a class="lin" href="login.php">Login</a>
       <p><?php if(isset($warning)) echo $warning ?></p>
   </form>
 </div>
