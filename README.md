@@ -64,3 +64,4 @@ brownie points for the web application:
 
 7)api medic internally uses Al and ml instead of(TensonFlow)  
 
+8)cloud link :https://unamusing-triggers.000webhostapp.com/
