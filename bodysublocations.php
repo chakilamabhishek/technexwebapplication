@@ -18,7 +18,7 @@ if(isset($_POST['bl'])) {
 
     <title></title>
   </head>
-  <body class="back1">
+  <body class="back3">
 <div class="wrap">
   <h1 class="he2">BODY sub locations</h1>
   <form class="" action="symptoms.php" method="post">
@@ -28,19 +28,19 @@ if(isset($_POST['bl'])) {
       ?>
       <h1 class="he2">Selector</h1>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="selector" value="man" id="selector1">
+          <input class="form-check-input" type="radio" name="selector" value="man" id="selector1" required>
           <label class="form-check-label" for="selector1">
               Man
           </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="selector" value="woman" id="selector2">
+          <input class="form-check-input" type="radio" name="selector" value="woman" id="selector2" required>
           <label class="form-check-label" for="selector2">
               Woman
           </label>
       </div>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="selector" value="boy" id="selector3">
+          <input class="form-check-input" type="radio" name="selector" value="boy" id="selector3" required>
           <label class="form-check-label" for="selector3">
               Boy
           </label>

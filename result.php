@@ -16,11 +16,10 @@ if(isset($_POST['bl']) && isset($_POST['bsl']) && isset($_POST['selector']) && i
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mast.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title></title>
   </head>
-  <body style="margin-top:100px">
+  <body class="back4">
     <div class="container">
       <div class="temp">
           <?php

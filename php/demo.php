@@ -12,11 +12,11 @@ class Demo
     {
         $this->config = parse_ini_file("config.ini");
     }
-    
+
     private function checkRequiredParameters()
     {
         $pass = true;
-        
+
         if (!isset($this->config['username']))
         {
             $pass = false;
@@ -28,7 +28,7 @@ class Demo
             $pass = false;
             print "You didn't set password in config.ini" ;
         }
-            
+
         if (!isset($this->config['authServiceUrl']))
         {
             $pass = false;
@@ -40,7 +40,7 @@ class Demo
             $pass = false;
             print "You didn't set healthserviceUrl in config.ini" ;
         }
-         
+
         return $pass;
     }
     public function tokensActivator() {
@@ -98,10 +98,10 @@ class Demo
         $yop += 0;
         if (!$this->checkRequiredParameters())
             return;
-        
+
         $tokenGenerator = new TokenGenerator($this->config['username'],$this->config['password'],$this->config['authServiceUrl']);
         $token = $tokenGenerator->loadToken();
-        
+
         if (!isset($token))
             exit();
 
@@ -152,35 +152,35 @@ class Demo
             exit();
 //        print("<h3>Calculated diagnosis for $randomSymptomName($randomSymptomId)</h3>");
         $this->printDiagnosis($diagnosis);
-        
+
         // get specialisations
         $specialisations = $this->diagnosisClient->loadSpecialisations($symptoms, 'male', 1988);
         if (!isset($specialisations))
             exit();
 //        print("<h3>Calculated specialisations for $randomSymptomName($randomSymptomId)</h3>");
         $this->printSpecialisations($specialisations);
-        
+
         // get proposed symptoms
         $proposedSymptoms = $this->diagnosisClient->loadProposedSymptoms($symptoms, 'male', 1988);
         if (!isset($proposedSymptoms))
             exit();
 //        print("<h3>Proposed symptoms for selected $randomSymptomName($randomSymptomId)</h3>");
         $this->printSimpleObject($proposedSymptoms);
-        
+
         // get red flag text
 //        $redFlagText = $this->diagnosisClient->loadRedFlag($randomSymptomId);
 //        if (!isset($redFlagText))
 //            exit();
 //        print("<h3>Red flag text for selected $randomSymptomName($randomSymptomId)</h3>");
 //        print($redFlagText);
-        
+
         // get issue info
         reset($diagnosis);
         while (list($key, $val) = each($diagnosis)) {
             $this->loadIssueInfo($val['Issue']['ID']);
         }
     }
-    
+
     private function loadIssueInfo($issueId)
     {
         $issueInfo = $this->diagnosisClient->loadIssueInfo($issueId);
@@ -199,7 +199,7 @@ class Demo
         echo "<p>","\n","<b>Possible symptoms:</b>\t",$issueInfo['PossibleSymptoms'], "</p>";
         print("</div>\n");
     }
-    
+
     public function printDiagnosis($object)
     {
         print("<div class='jumbotron'>\n");
@@ -216,7 +216,7 @@ class Demo
         }, $object);
         print "</div>" ;
     }
-    
+
     public function printSpecialisations($object)
     {
         print "<div class='jumbotron'>" ;
@@ -227,7 +227,7 @@ class Demo
         }, $object);
         print "</pre></div>" ;
     }
-    
+
     public function printSimpleObject($object)
     {
         print "<div class='jumbotron'>";
@@ -242,7 +242,7 @@ class Demo
     public function printBodyLocations($object) {
         array_map(function ($var) {
             echo "<div class=\"form-check form-check-inline\">";
-            echo "<input class=\"form-check-input\" type=\"radio\" name=\"bl\" id=\"bl{$var['ID']}\" value=\"{$var['ID']}\">";
+            echo "<input class=\"form-check-input\" type=\"radio\" name=\"bl\" id=\"bl{$var['ID']}\" value=\"{$var['ID']}\" required>";
             echo "<label class=\"form-check-label\" for=\"bl{$var['ID']}\">{$var['Name']}</label>";
             echo "</div>";
             echo "<br>";
@@ -251,7 +251,7 @@ class Demo
     public function printSubBodyLocations($object) {
         array_map(function ($var) {
             echo "<div class=\"form-check form-check-inline\">";
-            echo "<input class=\"form-check-input\" type=\"radio\" name=\"bsl\" id=\"bl{$var['ID']}\" value=\"{$var['ID']}\">";
+            echo "<input class=\"form-check-input\" type=\"radio\" name=\"bsl\" id=\"bl{$var['ID']}\" value=\"{$var['ID']}\" required>";
             echo "<label class=\"form-check-label\" for=\"bl{$var['ID']}\">{$var['Name']}</label>";
             echo "</div>";
             echo "<br>";
@@ -260,7 +260,7 @@ class Demo
     public function printSymptoms($object) {
         array_map(function ($var) {
             echo "<div class=\"form-check\">";
-            echo "<input class=\"form-check-input\" type=\"checkbox\" name=\"symptoms[]\" value=\"{$var['ID']}\" id=\"symp{$var['ID']}\">";
+            echo "<input class=\"form-check-input\" type=\"radio\" name=\"symptoms[]\" value=\"{$var['ID']}\" id=\"symp{$var['ID']}\" required >";
             echo "<label class=\"form-check-label\" for=\"symp{$var['ID']}\">{$var['Name']}</label>";
             echo "</div>";
         }, $object);

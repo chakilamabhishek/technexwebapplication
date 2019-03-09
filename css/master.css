@@ -2,6 +2,13 @@
   background-image: url("backimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+.back2{
+  background-image: url("../images/backimage2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .container .jumbotron {
     background: none
@@ -53,7 +60,7 @@ input[type=submit]{
   font-size: 20px;
   color: #fff;
 }
-.a {
+.lin {
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -68,4 +75,16 @@ input[type=submit]{
     border-radius: 20px;
     font-size: 20px;
     color: #fff;
+}
+.back3{
+  background-image: url("../images/backimage3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.back4{
+  background-image: url("../images/backimage4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

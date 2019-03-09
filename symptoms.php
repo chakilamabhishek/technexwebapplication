@@ -19,7 +19,7 @@ if(isset($_POST['bl']) && isset($_POST['bsl']) && isset($_POST['selector'])) {
 
     <title></title>
   </head>
-  <body class="back1">
+  <body class="back4">
 <div class="wrap">
   <form class="" action="result.php" method="post">
       <h1 class="he2">Symptoms</h1>

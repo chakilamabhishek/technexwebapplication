@@ -13,7 +13,7 @@ $bodyLocations = $demo->bodyLocationsLoader();
 
     <title>Body Locations</title>
   </head>
-  <body class="back1">
+  <body class="back2">
 <div class="wrap">
   <h1 class="he2">BODY LOCATIONS</h1>
   <form class="" action="bodysublocations.php" method="post">

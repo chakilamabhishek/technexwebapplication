@@ -2,7 +2,7 @@
   $dbhost  = 'localhost';
   $dbname  = 'technex';
   $dbuser  = 'root';
-  $dbpass  = '6nw3aals';
+  $dbpass  = '';
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   if ($connection->connect_error) die($connection->connect_error);
